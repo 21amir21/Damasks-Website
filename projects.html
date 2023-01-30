@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="final.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    ></script>
+
+    <title>Projects</title>
+    <style>
+      h2 {
+        font-family: serif;
+        color: black;
+        font-size: 45px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="parent">
+     
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="./images/logo.png" width="180" alt="logo"
+            /></a>
+          </div>
+          <nav>
+            <div id="navbar">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="customer service.html">Customer Service</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="search-box" style="box-sizing: border-box">
+              <input
+                class="search-txt"
+                type="text"
+                name="search"
+                placeholder="Type to search"
+              />
+              <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+              </a>
+            </div>
+            <div class="container2" onclick="myFunction(this)"></div>
+            <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <button class="dropdown-btn">
+                Products
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="products.html">All Products</a>
+                <a href="livingrooms.html">Living Room </a>
+                <a href="office_product.html">Office </a>
+                <a href="Outdoors.html">Outdoor</a>
+                <a href="Bedrooms.html">Bedroom</a>
+                <a href="DiningRooms.html">Dining Room</a>
+                <a href="Kitchen.html">Kitchen</a>
+              </div>
+
+              <button class="dropdown-btn">
+                Projects
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="projects.html">All Projects</a>
+                <a href="office_project.html">Office</a>
+                <a href="Hotel Project.html">hotel</a>
+                <a href="Villa Project.html">Ville</a>
+              </div>
+              <button class="dropdown-btn">
+                More
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="bestseller.html">Best Seller</a>
+              </div>
+            </div>
+
+            <div id="main">
+              <button class="openbtn" onclick="openNav()">&#9776;</button>
+            </div>
+            <script>
+              function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+
+              /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+              function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+              }
+              //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+              var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+
+              for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function () {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                  } else {
+                    dropdownContent.style.display = "block";
+                  }
+                });
+              }
+            </script>
+          </nav>
+        </div>
+
+        <div>
+          <img id="banner" src="./images/banner21.jpg" alt="Room" />
+          <div class="text-block2">
+            <h3 style="text-align: center"><strong> Our Projects </strong></h3>
+
+            <span style="font-size: 30px">
+              View spaces furnished with some of the finest items from DAMASKS.
+            </span>
+          </div>
+        </div>
+        <br />
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+
+        <h2 style="text-align: center">Featured Projects</h2>
+        <hr
+          style="
+            height: 2px;
+            border-width: 0;
+            color: gray;
+            background-color: gray;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        />
+
+        <div id="projects">
+          <div class="bg">
+            <img
+              class="bg"
+              src="./images/colorbg.png"
+              alt="background"
+              height="300"
+            />
+          </div>
+
+          <div class="imagesp" style="left: 7%">
+            <a href="Villa Project.html"
+              ><img
+                src="./images/homeproject.jpg"
+                alt="Home Project"
+                height="250"
+            /></a>
+          </div>
+          <div class="titlep" style="left: 17%">
+            <a href="Villa Project.html"> Villa </a>
+          </div>
+          <div class="textp" style="left: 9%">
+            Home interior featuring a wide range of furniture items from Damasks
+          </div>
+          <div class="imagesp" style="left: 37.8%">
+            <a href="office_project.html"
+              ><img
+                src="./images/officeproject.jpg"
+                alt="Office Project"
+                height="250"
+            /></a>
+          </div>
+          <div class="titlep" style="left: 47%">
+            <a href="office_project.html"> Office </a>
+          </div>
+          <div class="textp" style="left: 39%">
+            Fully furnished office space featuring office items and decor from
+            Damasks
+          </div>
+          <div class="imagesp" style="right: 7%">
+            <a href="Hotel Project.html"
+              ><img
+                src="./images/hotelproject.jpg"
+                alt="Hotel Project"
+                height="250"
+            /></a>
+          </div>
+          <div class="titlep" style="right: 17%">
+            <a href="Hotel Project.html"> Hotel </a>
+          </div>
+          <div class="textp" style="right: 9%">
+            Luxurious hotel rooms featuring classy and elegant Damasks furniture
+          </div>
+        </div>
+
+        <footer class="footer">
+          <hr />
+          <table>
+            <tr style="height: 60px">
+              <th><em>Damasks</em></th>
+
+              <th>Explore</th>
+              <th>Visit Us</th>
+              <th>Follow Us</th>
+              <th>Contact Us</th>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <a href="index.html" style="text-decoration: none; color: white"
+                  >Home</a
+                >
+              </td>
+              <td>7th st., No.261, In front of El Qamar El Senai, New Maadi</td>
+              <td>
+                <a
+                  href="https://www.Instagram.com/"
+                  style="text-decoration: none; color: white"
+                  >Instagram</a
+                >
+              </td>
+              <td>
+                <a
+                  href="mailto:custservice@damasks.com"
+                  style="text-decoration: none; color: white"
+                  >custservice@damasks.com</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <a
+                  href="AboutUs.html"
+                  style="text-decoration: none; color: white"
+                  >About</a
+                >
+              </td>
+              <td>Cairo,Egypt</td>
+              <td>
+                <a
+                  href="https://www.facebook.com/"
+                  style="text-decoration: none; color: white"
+                  >Facebook</a
+                >
+              </td>
+              <td>20-2-5193618</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <a
+                  href="Projects.html"
+                  style="text-decoration: none; color: white"
+                  >Projects</a
+                >
+              </td>
+              <td></td>
+              <td>
+                <a
+                  href="https://www.linkedin.com/"
+                  style="text-decoration: none; color: white"
+                  >LinkedIn</a
+                >
+              </td>
+              <td>01026555844</td>
+            </tr>
+          </table>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

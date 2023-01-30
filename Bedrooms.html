@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    ></script>
+    <title>Bedrooms</title>
+    <style>
+      div.b {
+        background-color: #c7c7c6;
+        padding: 80px;
+        font-family: sans-serif;
+        color: black;
+      }
+      table {
+        border-spacing: 50px 10px;
+        padding: 10px 220px;
+        color: white;
+        text-align: left;
+        margin: auto;
+      }
+      th {
+        font-weight: bold;
+        font-size: 15px;
+        width: 100px;
+        height: 20px;
+      }
+      td {
+        font-size: 13px;
+      }
+      .footer {
+        text-align: center;
+        background-color: black;
+        margin-top: 75px;
+        padding: 30px;
+      }
+      footer {
+        padding: 120px;
+        clear: both;
+        text-align: center;
+      }
+
+      body {
+        background-color: rgb(255, 255, 255);
+        margin: 0;
+      }
+
+      #navbar {
+        min-width: auto;
+        width: 100%;
+        overflow: hidden;
+        background-color: #333;
+        margin: auto;
+
+        border-radius: 5px;
+      }
+
+      #navbar a {
+        font-size: 1.3em;
+        font-weight: 400;
+        font-family: "Courier New", Courier, monospace;
+        display: block;
+        color: #c2c2c2ef;
+        text-align: center;
+        padding: 1.8em;
+        text-decoration: none;
+      }
+
+      #navbar li {
+        display: inline-block;
+      }
+
+      #navbar a:hover {
+        background-color: #f08e25;
+      }
+      #navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .bgbedroom-img {
+        /* The image used */
+
+        background-image: url("./images/Bedroommain.jpeg");
+        margin-right: auto;
+        margin-left: auto;
+
+        min-height: 700px;
+        z-index: 1;
+        /* Center and scale the image nicely */
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* Needed to position the navbar */
+
+        position: relative;
+      }
+      .container {
+        position: absolute;
+        margin: 20px;
+        width: 97.6%;
+      }
+
+      #parent {
+        position: relative;
+      }
+      .logo img {
+        position: absolute;
+        margin-top: -42px;
+        margin-left: 110px;
+      }
+
+      .sidebar {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+      }
+
+      /* The sidebar links */
+
+      .sidebar a,
+      .dropdown-btn {
+        padding: 8px 8px 8px 32px;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        transition: 0.3s;
+        display: block;
+        border: none;
+        background: none;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+
+      /* When you mouse over the navigation links, change their color */
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+
+      /* Position and style the close button (top right corner) */
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      /* The button used to open the sidebar */
+      .openbtn {
+        position: absolute;
+        top: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: rgb(37, 36, 36);
+        color: white;
+        padding: 5px 10px;
+        border: none;
+      }
+
+      .openbtn:hover {
+        background-color: #f08e25;
+      }
+
+      /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+      #main {
+        transition: margin-left 0.5s; /* If you want a transition effect */
+        padding: 20px;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidebar {
+          padding-top: 15px;
+        }
+        .sidebar a {
+          font-size: 18px;
+        }
+      }
+
+      /* On mouse-over */
+      .sidenav a:hover,
+      .dropdown-btn:hover {
+        color: rgb(244, 91, 35);
+      }
+      .active {
+        opacity: 1;
+        color: white;
+      }
+      .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+      }
+
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+      .search-box {
+        position: absolute;
+        bottom: 60px;
+        right: 20px;
+        opacity: 0.9;
+
+        background: rgb(37, 37, 37);
+        height: 60px;
+        border-radius: 40px;
+        padding: 10px;
+      }
+      .search-box:hover > .search-txt {
+        width: 240px;
+        padding: 0 6px;
+        top: 50px;
+      }
+      .search-box:hover > .search-btn {
+        background: white;
+      }
+      .search-btn {
+        color: #f08e25;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        text-decoration: none;
+      }
+      .search-txt {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+      }
+
+      .img_pos {
+        float: left;
+        width: 33.33%;
+        padding: 50px;
+        justify-content: space-between;
+        font-family: Georgia, serif;
+        font-size: 2vw;
+        background-color: rgba(180, 21, 21, 0.5);
+      }
+
+      .img_pos img {
+        position: relative;
+
+        height: 300px;
+        width: 300px;
+        overflow: auto;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .products {
+        margin: 20px;
+      }
+
+      .text {
+        float: left;
+        padding: 50px;
+      }
+
+      .product_text {
+        font-size: 20px;
+        clear: left;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      td img {
+        width: 400px;
+        height: 300px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 30px;
+      }
+
+      table td:hover img {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+      }
+
+      .price {
+        color: grey;
+        font-size: 22px;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      .card button:hover {
+        opacity: 0.7;
+      }
+
+      .product_text {
+        color: black;
+      }
+      .product_description {
+        color: black;
+        font-size: 20px;
+      }
+
+      .pic {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("./images/bedroommain.jpeg");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .txt {
+        font-family: "Courier New", Courier, monospace;
+        text-align: left;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 50px;
+        text-shadow: 2px 1.5px black;
+      }
+      ul.breadcrumb {
+        list-style: none;
+        font-weight: bold;
+      }
+
+      ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+      }
+
+      ul.breadcrumb li + li:before {
+        padding: 10px;
+        color: black;
+        content: "/\00a0";
+      }
+
+      ul.breadcrumb li a {
+        color: black;
+        text-decoration: none;
+      }
+
+      ul.breadcrumb li a:hover {
+        text-shadow: 0.5px 1.25px coral;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+    <div id="parent">
+      <div class="bgbedroom-img">
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="./images/logo.png" width="180" alt="logo"
+            /></a>
+          </div>
+
+          <nav>
+            <div id="navbar">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Customer Service.html">Customer Service</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="search-box">
+              <input
+                class="search-txt"
+                type="text"
+                placeholder="Type to search"
+              />
+              <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+              </a>
+            </div>
+            <div class="container2" onclick="myFunction(this)"></div>
+            <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <button class="dropdown-btn">
+                Products
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="products.html">All Products</a>
+                <a href="livingrooms.html">Living room </a>
+                <a href="office_product.html">Office </a>
+                <a href="Outdoors.html">Outdoor</a>
+                <a href="Bedrooms.html">Bedroom</a>
+                <a href="DiningRooms.html">Dining Room</a>
+                <a href="Kitchen.html">Kitchen</a>
+              </div>
+
+              <button class="dropdown-btn">
+                Projects
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="projects.html">All Projects</a>
+                <a href="office_project.html">Office</a>
+                <a href="Hotel Project.html">hotel</a>
+                <a href="Villa Project.html">Villa</a>
+              </div>
+              <button class="dropdown-btn">
+                More
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="bestseller.html">Best Seller</a>
+              </div>
+            </div>
+
+            <div id="main">
+              <button class="openbtn" onclick="openNav()">&#9776;</button>
+            </div>
+            <script>
+              function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+
+              /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+              function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+              }
+              //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+              var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+
+              for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function () {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                  } else {
+                    dropdownContent.style.display = "block";
+                  }
+                });
+              }
+            </script>
+          </nav>
+        </div>
+
+
+        <div class="txt">
+          <p>Bedrooms</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <ul class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="Bedrooms.html">Bedrooms</a></li>
+    </ul>
+
+    <table
+      style="
+        border-spacing: 30px 10px;
+        padding: 50px;
+        color: white;
+        text-align: center;
+        margin: auto;
+      "
+    >
+      <tr>
+        <td>
+          <div class="card">
+            <img
+              src="./images/bedroom1.jpg"
+              alt="Bedroom1"
+              style="width: 100%"
+            />
+            <p class="product_text">Grey Upholding</p>
+            <p class="price">3600 L.E.</p>
+            <p class="product_description">
+              Steel comfy Bed crafted just for you...
+            </p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img
+              src="./images/bedroom25.jpg"
+              alt="Bedroom2"
+              style="width: 100%"
+            />
+            <p class="product_text">Floating Bed</p>
+            <p class="price">5400 L.E.</p>
+            <p class="product_description">
+              Wanna fly into your Dreams? <br />
+              We got you...
+            </p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img
+              src="./images/bedroom3.jpg"
+              alt="Bedroom3"
+              style="width: 100%"
+            />
+            <p class="product_text">Modern Fashinable</p>
+            <p class="price">3400 L.E.</p>
+            <p class="product_description">
+              Sleep Elegantly with this Fashinable piece
+            </p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="card">
+            <img
+              src="./images/bedroom20.jpg"
+              alt="Bedroom4"
+              style="width: 100%"
+            />
+            <p class="product_text">Wooden and Upholstered</p>
+            <p class="price">1900 L.E.</p>
+            <p class="product_description">
+              Keep your children safe and happy with our kids collection
+            </p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img
+              src="./images/bedroom5.jpg"
+              alt="Bedroom5"
+              style="width: 100%"
+            />
+            <p class="product_text">Cozy Brown</p>
+            <p class="price">3200 L.E.</p>
+            <p class="product_description">
+              Tough day at work? This bed is what you looking for
+            </p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </td>
+        <td>
+          <div class="card">
+            <img
+              src="./images/bedroom6.jpg"
+              alt="Bedroom6"
+              style="width: 100%"
+            />
+            <p class="product_text">Crawling Comfy</p>
+            <p class="price">2900 L.E.</p>
+            <p class="product_description">
+              For all the night crawlers, We got what you're looking for
+            </p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <footer class="footer">
+      <hr />
+      <table>
+        <tr style="height: 60px">
+          <td>
+            <h3 style="font-size: 20px"><em> Damasks </em></h3>
+          </td>
+          <td>Explore</td>
+          <td>Visit Us</td>
+          <td>Follow Us</td>
+          <td>Contact Us</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <a href="Damasks.html" style="text-decoration: none; color: white"
+              >Home</a
+            >
+          </td>
+          <td>7th st., No.261, In front of El Qamar El Senai, New Maadi</td>
+          <td>
+            <a
+              href="https://www.Instagram.com/"
+              style="text-decoration: none; color: white"
+              >Instagram</a
+            >
+          </td>
+          <td>
+            <a
+              href="mailto:custservice@damasks.com"
+              style="text-decoration: none; color: white"
+              >custservice@damasks.com</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <a href="AboutUs-2.html" style="text-decoration: none; color: white"
+              >About</a
+            >
+          </td>
+          <td>Cairo,Egypt</td>
+          <td>
+            <a
+              href="https://www.facebook.com/"
+              style="text-decoration: none; color: white"
+              >Facebook</a
+            >
+          </td>
+          <td>20-2-5193618</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <a href="Projects.html" style="text-decoration: none; color: white"
+              >Projects</a
+            >
+          </td>
+          <td></td>
+          <td>
+            <a
+              href="https://www.linkedin.com/"
+              style="text-decoration: none; color: white"
+              >LinkedIn</a
+            >
+          </td>
+          <td>01026555844</td>
+        </tr>
+      </table>
+    </footer>
+  </body>
+</html>
