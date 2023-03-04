@@ -10,17 +10,10 @@ function openNav() {
   }
   //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
   var dropdown = document.getElementsByClassName("dropdown-btn");
-<<<<<<< HEAD
-
   var i;
 
   for (i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function() {
-=======
-
-  for (var i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", () => {
->>>>>>> 3f29790cf349b498928be4ee0920f21766359aa4
       this.classList.toggle("active");
       var dropdownContent = this.nextElementSibling;
       if (dropdownContent.style.display === "block") {
@@ -35,11 +28,7 @@ function openNav() {
   // this is a topUp function in Customer Service Page // Might remove it later
   const myButton = document.getElementById("myBtn");
 
-<<<<<<< HEAD
           window.onscroll = function() {
-=======
-          window.onscroll = () => {
->>>>>>> 3f29790cf349b498928be4ee0920f21766359aa4
             scrollFunction();
           };
 
