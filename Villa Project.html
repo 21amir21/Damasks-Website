@@ -1,637 +1,655 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head lang="en">
-    <meta charset="UTF-8" />
+<head lang="en">
+    <meta charset="UTF-8"/>
     <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+            defer
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
     ></script>
     <title>Villa Project</title>
     <style>
-      div.b {
-        background-color: #c7c7c6;
-        padding: 80px;
-        font-family: sans-serif;
-        color: black;
-      }
-      table {
-        border-spacing: 50px 10px;
-        padding: 10px 220px;
-        color: white;
-        text-align: left;
-        margin: auto;
-      }
-      th {
-        font-weight: bold;
-        font-size: 15px;
-        width: 100px;
-        height: 20px;
-      }
-      td {
-        font-size: 13px;
-      }
-      .footer {
-        text-align: center;
-        background-color: black;
-        margin-top: 75px;
-        padding: 30px;
-      }
-      footer {
-        padding: 120px;
-        clear: both;
-        text-align: center;
-      }
+        div.b {
+            background-color: #c7c7c6;
+            padding: 80px;
+            font-family: sans-serif;
+            color: black;
+        }
 
-      body {
-        background-color: rgb(255, 255, 255);
-        margin: 0px;
-      }
+        table {
+            border-spacing: 50px 10px;
+            padding: 10px 220px;
+            color: white;
+            text-align: left;
+            margin: auto;
+        }
 
-      body,
-      html {
-        height: 100%;
-      }
+        th {
+            font-weight: bold;
+            font-size: 15px;
+            width: 100px;
+            height: 20px;
+        }
 
-      .txt {
-        font-family: "Courier New", Courier, monospace;
-        text-align: left;
-        position: relative;
-        top: 200px;
-        left: 50%;
+        td {
+            font-size: 13px;
+        }
 
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 50px;
-        text-shadow: 2px 1.5px black;
-      }
-      ul.breadcrumb {
-        list-style: none;
-        font-weight: bold;
-      }
+        .footer {
+            text-align: center;
+            background-color: black;
+            margin-top: 75px;
+            padding: 30px;
+        }
 
-      ul.breadcrumb li {
-        display: inline;
-        font-size: 18px;
-      }
+        footer {
+            padding: 120px;
+            clear: both;
+            text-align: center;
+        }
 
-      ul.breadcrumb li + li:before {
-        padding: 10px;
-        color: black;
-        content: "/\00a0";
-      }
+        body {
+            background-color: rgb(255, 255, 255);
+            margin: 0px;
+        }
 
-      ul.breadcrumb li a {
-        color: black;
-        text-decoration: none;
-      }
+        body,
+        html {
+            height: 100%;
+        }
 
-      ul.breadcrumb li a:hover {
-        text-shadow: 0.5px 1.25px coral;
-      }
+        .txt {
+            font-family: "Courier New", Courier, monospace;
+            text-align: left;
+            position: relative;
+            top: 200px;
+            left: 50%;
 
-      .villa_projects h2 {
-        padding-top: 160px;
-        padding-right: 50px;
-        padding-left: 50px;
-        padding-bottom: 50px;
-      }
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 50px;
+            text-shadow: 2px 1.5px black;
+        }
 
-      #villa_image1 {
-        width: 700px;
-        height: 450px;
-        float: left;
-        padding-left: 30px;
-      }
+        ul.breadcrumb {
+            list-style: none;
+            font-weight: bold;
+        }
 
-      .h2_villa1 {
-        font-size: 40px;
-        display: inline-block;
-        margin-left: 200px;
-        width: 200px;
-        height: 100px;
-        padding-left: 70px;
-        padding-right: 10px;
-        margin-top: 100px;
-      }
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
 
-      .p_villa1 {
-        font-size: 20px;
-        position: absolute;
-        margin-left: 800px;
-        float: right;
-        top: 890px;
-        margin-right: 30px;
-      }
+        ul.breadcrumb li + li:before {
+            padding: 10px;
+            color: black;
+            content: "/\00a0";
+        }
 
-      #villa_image2 {
-        width: 700px;
-        height: 450px;
-        float: right;
-        margin-right: 30px;
-        margin-top: 400px;
-      }
+        ul.breadcrumb li a {
+            color: black;
+            text-decoration: none;
+        }
 
-      .h2_villa2 {
-        font-size: 40px;
-        display: inline-block;
-        margin-left: 255px;
-        width: 200px;
-        height: 100px;
-        margin-top: 300px;
-      }
+        ul.breadcrumb li a:hover {
+            text-shadow: 0.5px 1.25px coral;
+        }
 
-      .p_villa2 {
-        font-size: 20px;
-        position: relative;
-        margin-left: 30px;
-        margin-right: 30px;
-        top: -50px;
-      }
+        .villa_projects h2 {
+            padding-top: 160px;
+            padding-right: 50px;
+            padding-left: 50px;
+            padding-bottom: 50px;
+        }
 
-      #villa_image3 {
-        float: left;
-        padding-left: 30px;
-        width: 700px;
-        height: 450px;
-        margin-top: 250px;
-      }
+        #villa_image1 {
+            width: 700px;
+            height: 450px;
+            float: left;
+            padding-left: 30px;
+        }
 
-      .h2_villa3 {
-        font-size: 40px;
-        display: inline-block;
-        margin-left: 200px;
-        margin-top: 190px;
-        width: 200px;
-        height: 100px;
-        padding-left: 70px;
-        padding-right: 10px;
-      }
+        .h2_villa1 {
+            font-size: 40px;
+            display: inline-block;
+            margin-left: 200px;
+            width: 200px;
+            height: 100px;
+            padding-left: 70px;
+            padding-right: 10px;
+            margin-top: 100px;
+        }
 
-      .p_villa3 {
-        font-size: 20px;
-        position: absolute;
-        margin-left: 800px;
-        margin-right: 30px;
-        float: right;
-        top: 2090px;
-      }
+        .p_villa1 {
+            font-size: 20px;
+            position: absolute;
+            margin-left: 800px;
+            float: right;
+            top: 890px;
+            margin-right: 30px;
+        }
 
-      #villa_image4 {
-        width: 700px;
-        height: 650px;
-        float: right;
-        margin-right: 30px;
-        margin-top: 400px;
-        margin-bottom: 80px;
-      }
+        #villa_image2 {
+            width: 700px;
+            height: 450px;
+            float: right;
+            margin-right: 30px;
+            margin-top: 400px;
+        }
 
-      .h2_villa4 {
-        font-size: 40px;
-        display: inline-block;
-        margin-left: 255px;
-        width: 200px;
-        height: 100px;
-        margin-top: 350px;
-      }
+        .h2_villa2 {
+            font-size: 40px;
+            display: inline-block;
+            margin-left: 255px;
+            width: 200px;
+            height: 100px;
+            margin-top: 300px;
+        }
 
-      .p_villa4 {
-        font-size: 20px;
-        position: relative;
-        margin-left: 30px;
-        margin-right: 30px;
-        top: -50px;
-      }
+        .p_villa2 {
+            font-size: 20px;
+            position: relative;
+            margin-left: 30px;
+            margin-right: 30px;
+            top: -50px;
+        }
 
-      #navbar {
-        border-radius: 5px;
-        min-width: auto;
-        width: 100%;
-        overflow: hidden;
-        background-color: #333;
-        margin: auto;
-      }
+        #villa_image3 {
+            float: left;
+            padding-left: 30px;
+            width: 700px;
+            height: 450px;
+            margin-top: 250px;
+        }
 
-      #navbar a {
-        font-size: 1.3em;
-        font-weight: 400;
-        font-family: "Courier New", Courier, monospace;
-        display: block;
-        color: #c2c2c2ef;
-        text-align: center;
-        padding: 1.8em;
-        text-decoration: none;
-      }
+        .h2_villa3 {
+            font-size: 40px;
+            display: inline-block;
+            margin-left: 200px;
+            margin-top: 190px;
+            width: 200px;
+            height: 100px;
+            padding-left: 70px;
+            padding-right: 10px;
+        }
 
-      #navbar li {
-        display: inline-block;
-      }
+        .p_villa3 {
+            font-size: 20px;
+            position: absolute;
+            margin-left: 800px;
+            margin-right: 30px;
+            float: right;
+            top: 2090px;
+        }
 
-      #navbar a:hover {
-        background-color: rgb(239, 198, 145);
-        color: #f1f1f1;
-        opacity: 1;
-      }
-      #navbar ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-      .ville-img {
-        background-image: url("./images/HeaderVilla.jpg");
-        margin-right: auto;
-        margin-left: auto;
+        #villa_image4 {
+            width: 700px;
+            height: 650px;
+            float: right;
+            margin-right: 30px;
+            margin-top: 400px;
+            margin-bottom: 80px;
+        }
 
-        min-height: 70%;
-        z-index: 1;
-        /* Center and scale the image nicely */
-        background-position: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* Needed to position the navbar */
-        border-radius: 5px;
-        position: relative;
-      }
-      .container {
-        position: absolute;
-        margin: 20px;
-        width: 97.6%;
-      }
-      .logo img {
-        position: absolute;
-        margin-top: -42px;
-        margin-left: 110px;
-      }
+        .h2_villa4 {
+            font-size: 40px;
+            display: inline-block;
+            margin-left: 255px;
+            width: 200px;
+            height: 100px;
+            margin-top: 350px;
+        }
 
-      .sidebar {
-        height: 100%; /* 100% Full-height */
-        width: 0; /* 0 width - change this with JavaScript */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Stay on top */
-        top: 0;
-        left: 0;
-        background-color: #111; /* Black*/
-        overflow-x: hidden; /* Disable horizontal scroll */
-        padding-top: 60px; /* Place content 60px from the top */
-        transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-      }
+        .p_villa4 {
+            font-size: 20px;
+            position: relative;
+            margin-left: 30px;
+            margin-right: 30px;
+            top: -50px;
+        }
 
-      /* The sidebar links */
+        #navbar {
+            border-radius: 5px;
+            min-width: auto;
+            width: 100%;
+            overflow: hidden;
+            background-color: #333;
+            margin: auto;
+        }
 
-      .sidebar a,
-      .dropdown-btn {
-        padding: 8px 8px 8px 32px;
-        font-family: "Courier New", Courier, monospace;
-        text-decoration: none;
-        font-size: 20px;
-        color: #818181;
-        transition: 0.3s;
-        display: block;
-        border: none;
-        background: none;
-        text-align: left;
-        cursor: pointer;
-        outline: none;
-      }
+        #navbar a {
+            font-size: 1.3em;
+            font-weight: 400;
+            font-family: "Courier New", Courier, monospace;
+            display: block;
+            color: #c2c2c2ef;
+            text-align: center;
+            padding: 1.8em;
+            text-decoration: none;
+        }
 
-      /* When you mouse over the navigation links, change their color */
-      .sidebar a:hover {
-        color: #f1f1f1;
-      }
+        #navbar li {
+            display: inline-block;
+        }
 
-      /* Position and style the close button (top right corner) */
-      .sidebar .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
+        #navbar a:hover {
+            background-color: rgb(239, 198, 145);
+            color: #f1f1f1;
+            opacity: 1;
+        }
 
-      /* The button used to open the sidebar */
-      .openbtn {
-        position: absolute;
-        top: 30px;
-        font-size: 20px;
-        cursor: pointer;
-        background-color: rgb(37, 36, 36);
-        color: white;
-        padding: 5px 10px;
-        border: none;
-      }
+        #navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-      .openbtn:hover {
-        background-color: rgb(239, 198, 145);
-      }
+        .ville-img {
+            background-image: url("./images/HeaderVilla.jpg");
+            margin-right: auto;
+            margin-left: auto;
 
-      /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-      #main {
-        transition: margin-left 0.5s; /* If you want a transition effect */
-        padding: 20px;
-      }
+            min-height: 70%;
+            z-index: 1;
+            /* Center and scale the image nicely */
+            background-position: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Needed to position the navbar */
+            border-radius: 5px;
+            position: relative;
+        }
 
-      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+        .container {
+            position: absolute;
+            margin: 20px;
+            width: 97.6%;
+        }
+
+        .logo img {
+            position: absolute;
+            margin-top: -42px;
+            margin-left: 110px;
+        }
+
         .sidebar {
-          padding-top: 15px;
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0;
+            left: 0;
+            background-color: #111; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
         }
-        .sidebar a {
-          font-size: 18px;
+
+        /* The sidebar links */
+
+        .sidebar a,
+        .dropdown-btn {
+            padding: 8px 8px 8px 32px;
+            font-family: "Courier New", Courier, monospace;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            transition: 0.3s;
+            display: block;
+            border: none;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
         }
-      }
 
-      /* On mouse-over */
-      .sidenav a:hover,
-      .dropdown-btn:hover {
-        color: rgb(239, 198, 145);
-      }
-      .active {
-        opacity: 1;
-        color: white;
-      }
-      .dropdown-container {
-        display: none;
-        background-color: #262626;
-        padding-left: 8px;
-      }
+        /* When you mouse over the navigation links, change their color */
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
 
-      /* Optional: Style the caret down icon */
-      .fa-caret-down {
-        float: right;
-        padding-right: 8px;
-      }
-      .search-box {
-        position: absolute;
-        top: 20px;
-        right: 20px;
+        /* Position and style the close button (top right corner) */
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
 
-        background: rgb(37, 37, 37);
-        height: 13.5%;
-        border-radius: 30px;
-        padding: 10px;
-      }
-      .search-box:hover > .search-txt {
-        width: 240px;
-        padding: 0 6px;
-        top: 50px;
-      }
-      .search-box:hover > .search-btn {
-        background: white;
-      }
-      .search-btn {
-        color: rgb(239, 198, 145);
-        float: right;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.4s;
-        text-decoration: none;
-      }
-      .search-txt {
-        border: none;
-        background: none;
-        outline: none;
-        float: left;
-        padding: 0;
-        color: white;
-        font-size: 16px;
-        transition: 0.4s;
-        line-height: 40px;
-        width: 0px;
-      }
+        /* The button used to open the sidebar */
+        .openbtn {
+            position: absolute;
+            top: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: rgb(37, 36, 36);
+            color: white;
+            padding: 5px 10px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: rgb(239, 198, 145);
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left 0.5s; /* If you want a transition effect */
+            padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+
+        /* On mouse-over */
+        .sidenav a:hover,
+        .dropdown-btn:hover {
+            color: rgb(239, 198, 145);
+        }
+
+        .active {
+            opacity: 1;
+            color: white;
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+
+        /* Optional: Style the caret down icon */
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            background: rgb(37, 37, 37);
+            height: 13.5%;
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        .search-box:hover > .search-txt {
+            width: 240px;
+            padding: 0 6px;
+            top: 50px;
+        }
+
+        .search-box:hover > .search-btn {
+            background: white;
+        }
+
+        .search-btn {
+            color: rgb(239, 198, 145);
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            text-decoration: none;
+        }
+
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
-    <div class="ville-img">
-      <div class="container">
+<body>
+<div class="ville-img">
+    <div class="container">
         <div class="logo">
-          <a href="index.html"
+            <a href="index.html"
             ><img src="./images/logo.png" width="180" alt="logo"
-          /></a>
+            /></a>
         </div>
         <nav>
-          <div id="navbar">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="customer service.html">Customer Service</a></li>
-              <li><a href="AboutUs.html">About</a></li>
-              <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <p class="txt">Villa Project</p>
-          <div class="search-box">
-            <input
-              class="search-txt"
-              type="text"
-              name="search"
-              placeholder="Type to search"
-            />
-            <a class="search-btn" href="#">
-              <i class="fas fa-search"></i>
-            </a>
-          </div>
-          <div class="container2" onclick="myFunction(this)"></div>
-          <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-              >&times;</a
-            >
-            <button class="dropdown-btn">
-              Products
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container">
-              <a href="Products.html">All Products</a>
-              <a href="livingrooms.html">Living Room </a>
-              <a href="office_product.html">Office </a>
-              <a href="Outdoors.html">Outdoor</a>
-              <a href="Bedrooms.html">Bedroom</a>
-              <a href="DiningRooms.html">Dining Room</a>
-              <a href="Kitchen.html">Kitchen</a>
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="customer service.html">Customer Service</a></li>
+                    <li><a href="AboutUs.html">About</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
             </div>
 
-            <button class="dropdown-btn">
-              Projects
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container">
-              <a href="projects.html">All Projects</a>
-              <a href="office_project.html">Office</a>
-              <a href="Hotel Project.html">hotel</a>
-              <a href="Villa Project.html">Villa</a>
+            <p class="txt">Villa Project</p>
+            <div class="search-box">
+                <input
+                        class="search-txt"
+                        type="text"
+                        name="search"
+                        placeholder="Type to search"
+                />
+                <a class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
             </div>
-            <button class="dropdown-btn">
-              More
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container">
-              <a href="bestseller.html">Best Seller</a>
-            </div>
-          </div>
+            <div class="container2" onclick="myFunction(this)"></div>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+                >
+                <button class="dropdown-btn">
+                    Products
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="products.html">All Products</a>
+                    <a href="livingrooms.html">Living Room </a>
+                    <a href="office_product.html">Office </a>
+                    <a href="Outdoors.html">Outdoor</a>
+                    <a href="Bedrooms.html">Bedroom</a>
+                    <a href="DiningRooms.html">Dining Room</a>
+                    <a href="kitchen.html">Kitchen</a>
+                </div>
 
-          <div id="main">
-            <button class="openbtn" onclick="openNav()">&#9776;</button>
-          </div>
+                <button class="dropdown-btn">
+                    Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="projects.html">All Projects</a>
+                    <a href="office_project.html">Office</a>
+                    <a href="Hotel Project.html">hotel</a>
+                    <a href="Villa Project.html">Villa</a>
+                </div>
+                <button class="dropdown-btn">
+                    More
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="bestseller.html">Best Seller</a>
+                </div>
+            </div>
+
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+            </div>
         </nav>
-      </div>
     </div>
+</div>
 
-    <br />
-    <ul class="breadcrumb">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="Villa Project.html">Villa</a></li>
-    </ul>
+<br/>
+<ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="Villa Project.html">Villa</a></li>
+</ul>
 
-    <br />
-    <br />
-    <br />
-    <hr style="width: 50%" />
-    <br />
-    <br />
-    <br />
+<br/>
+<br/>
+<br/>
+<hr style="width: 50%"/>
+<br/>
+<br/>
+<br/>
 
-    <div class="villa_projects">
-      <img id="villa_image1" src="./images/villa2.jpg" alt="Villa" />
-    </div>
-    <div>
-      <h2 class="h2_villa1">Description</h2>
-      <p class="p_villa1">
+<div class="villa_projects">
+    <img id="villa_image1" src="./images/villa2.jpg" alt="Villa"/>
+</div>
+<div>
+    <h2 class="h2_villa1">Description</h2>
+    <p class="p_villa1">
         Luxurious main floar made with love for fashion-loving couples, all the
         furniture made in Italy, carpets are hand-made in Spain, Smart lighting
         system with classic chandeliers.
-      </p>
-    </div>
+    </p>
+</div>
 
-    <br />
+<br/>
 
-    <div>
-      <img
-        id="villa_image2"
-        src="./images/UpperFloarVilla.jpg"
-        alt="UpperFloar"
-      />
-    </div>
+<div>
+    <img
+            id="villa_image2"
+            src="./images/UpperFloarVilla.jpg"
+            alt="UpperFloar"
+    />
+</div>
 
-    <div>
-      <h2 class="h2_villa2">Description</h2>
-      <p class="p_villa2">
+<div>
+    <h2 class="h2_villa2">Description</h2>
+    <p class="p_villa2">
         This one is for quiettness and peace lovers, most of the pieces are made
         of wood, there is also a big balacony for lovely and fresh air.
-      </p>
-    </div>
+    </p>
+</div>
 
-    <br />
+<br/>
 
-    <div>
-      <img id="villa_image3" src="./images/Villa3.jpg" alt="VillaLivingRoom" />
-    </div>
+<div>
+    <img id="villa_image3" src="./images/Villa3.jpg" alt="VillaLivingRoom"/>
+</div>
 
-    <div>
-      <h2 class="h2_villa3">Description</h2>
-      <p class="p_villa3">
+<div>
+    <h2 class="h2_villa3">Description</h2>
+    <p class="p_villa3">
         Modern style is one of our best in the collection, it comes with many
-        different forms also glass from both sides for a good and calm view.
-      </p>
-    </div>
+        forms also glass from both sides for a good and calm view.
+    </p>
+</div>
 
-    <br />
+<br/>
 
-    <div>
-      <img
-        id="villa_image4"
-        src="./images/Black-Villa-LivingRoom.jpg"
-        alt="BlackLivingRoom"
-      />
-    </div>
+<div>
+    <img
+            id="villa_image4"
+            src="./images/Black-Villa-LivingRoom.jpg"
+            alt="BlackLivingRoom"
+    />
+</div>
 
-    <div>
-      <h2 class="h2_villa4">Description</h2>
-      <p class="p_villa4">
+<div>
+    <h2 class="h2_villa4">Description</h2>
+    <p class="p_villa4">
         The Casual black furniture style centered by wood from all sides for a
         cozy and warm night.
-      </p>
-    </div>
+    </p>
+</div>
 
-    <footer class="footer">
-      <hr />
-      <table>
+<footer class="footer">
+    <hr/>
+    <table>
         <tr style="height: 60px">
-          <td>
-            <h3 style="font-size: 20px"><em> Damasks </em></h3>
-          </td>
-          <td>Explore</td>
-          <td>Visit Us</td>
-          <td>Follow Us</td>
-          <td>Contact Us</td>
+            <td>
+                <h3 style="font-size: 20px"><em> Damasks </em></h3>
+            </td>
+            <td>Explore</td>
+            <td>Visit Us</td>
+            <td>Follow Us</td>
+            <td>Contact Us</td>
         </tr>
 
         <tr>
-          <td></td>
-          <td>
-            <a href="Damasks.html" style="text-decoration: none; color: white"
-              >Home</a
-            >
-          </td>
-          <td>7th st., No.261, In front of El Qamar El Senai, New Maadi</td>
-          <td>
-            <a
-              href="https://www.Instagram.com/"
-              style="text-decoration: none; color: white"
-              >Instagram</a
-            >
-          </td>
-          <td>
-            <a
-              href="mailto:custservice@damasks.com"
-              style="text-decoration: none; color: white"
-              >custservice@damasks.com</a
-            >
-          </td>
+            <td></td>
+            <td>
+                <a href="Damasks.html" style="text-decoration: none; color: white"
+                >Home</a
+                >
+            </td>
+            <td>7th st., No.261, In front of El Qamar El Senai, New Maadi</td>
+            <td>
+                <a
+                        href="https://www.Instagram.com/"
+                        style="text-decoration: none; color: white"
+                >Instagram</a
+                >
+            </td>
+            <td>
+                <a
+                        href="mailto:custservice@damasks.com"
+                        style="text-decoration: none; color: white"
+                >custservice@damasks.com</a
+                >
+            </td>
         </tr>
 
         <tr>
-          <td></td>
-          <td>
-            <a href="AboutUs-2.html" style="text-decoration: none; color: white"
-              >About</a
-            >
-          </td>
-          <td>Cairo,Egypt</td>
-          <td>
-            <a
-              href="https://www.facebook.com/"
-              style="text-decoration: none; color: white"
-              >Facebook</a
-            >
-          </td>
-          <td>20-2-5193618</td>
+            <td></td>
+            <td>
+                <a href="AboutUs-2.html" style="text-decoration: none; color: white"
+                >About</a
+                >
+            </td>
+            <td>Cairo,Egypt</td>
+            <td>
+                <a
+                        href="https://www.facebook.com/"
+                        style="text-decoration: none; color: white"
+                >Facebook</a
+                >
+            </td>
+            <td>20-2-5193618</td>
         </tr>
 
         <tr>
-          <td></td>
-          <td>
-            <a href="Projects.html" style="text-decoration: none; color: white"
-              >Projects</a
-            >
-          </td>
-          <td></td>
-          <td>
-            <a
-              href="https://www.linkedin.com/"
-              style="text-decoration: none; color: white"
-              >LinkedIn</a
-            >
-          </td>
-          <td>01026555844</td>
+            <td></td>
+            <td>
+                <a href="Projects.html" style="text-decoration: none; color: white"
+                >Projects</a
+                >
+            </td>
+            <td></td>
+            <td>
+                <a
+                        href="https://www.linkedin.com/"
+                        style="text-decoration: none; color: white"
+                >LinkedIn</a
+                >
+            </td>
+            <td>01026555844</td>
         </tr>
-      </table>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </table>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>
