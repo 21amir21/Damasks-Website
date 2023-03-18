@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css"/>
+    <title>Home</title>
+    <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    ></script>
+    <meta charset="utf-8"/>
+    <style>
+        body {
+            display: block;
+            margin: 0px;
+        }
+
+        .bg-img {
+            /* The image used */
+            background-image: url("../images/homep.jpg");
+            margin-right: auto;
+            margin-left: auto;
+
+            min-height: 979px;
+            z-index: 1;
+            /* Center and scale the image nicely */
+            background-position: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Needed to position the navbar */
+
+            position: relative;
+        }
+
+        .desc {
+            margin: 0px;
+            position: absolute;
+            top: 350px;
+            left: 160px;
+            color: #fffcf2;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: 400;
+        }
+
+        .desc2 {
+            margin: 0px;
+            position: absolute;
+            top: 400px;
+            left: 150px;
+            color: #fffcf2;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: lighter;
+            font-size: 150px;
+        }
+
+        .desc3 {
+            margin: 0px;
+            position: absolute;
+            top: 650px;
+            left: 160px;
+            color: #fffcf2;
+            opacity: 0.5;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: 400;
+            margin-right: 72%;
+        }
+
+        .search-box {
+            position: absolute;
+            bottom: 60px;
+            right: 20px;
+
+            background: rgb(37, 37, 37);
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div class="bg-img">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"
+                ><img src="../images/logo.png" width="180" alt="logo"
+                /></a>
+            </div>
+            <nav>
+                <div id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Customer Service.html">Customer Service</a></li>
+                        <li><a href="AboutUs.html">About</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <input
+                            class="search-txt"
+                            type="text"
+                            name="search"
+                            placeholder="Type to search"
+                    />
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+                <div class="container2" onclick="myFunction(this)"></div>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                    >&times;</a
+                    >
+                    <button class="dropdown-btn">
+                        Products
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="products.html">All Products</a>
+                        <a href="livingrooms.html">Living room </a>
+                        <a href="office_product.html">Office </a>
+                        <a href="Outdoors.html">Outdoor</a>
+                        <a href="Bedrooms.html">Bedroom</a>
+                        <a href="DiningRooms.html">Dining Room</a>
+                        <a href="Kitchen.html">Kitchen</a>
+                    </div>
+
+                    <button class="dropdown-btn">
+                        Projects
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="projects.html">All Projects</a>
+                        <a href="office_project.html">Office</a>
+                        <a href="Hotel%20Project.html">hotel</a>
+                        <a href="../Villa%20Project.html">Ville</a>
+                    </div>
+                    <button class="dropdown-btn">
+                        More
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="bestseller.html">Best Seller</a>
+                    </div>
+                </div>
+
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+            </nav>
+        </div>
+        <div class="plus">
+            <a href="livingrooms.html"
+            ><img
+                    class="plus1"
+                    width="40"
+                    src="../images/pngwing.com.png"
+                    alt="plus1"
+            /></a>
+
+            <a href="office_product.html"
+            ><img
+                    class="plus2"
+                    width="40"
+                    src="../images/pngwing.com.png"
+                    alt="plus2"
+            /></a>
+        </div>
+        <div class="backg">
+            <div>
+                <h4 class="desc">SUPERIOR</h4>
+                <h1 class="desc2">Design</h1>
+                <p class="desc3">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam sunt
+                    ipsam modi, dolorum voluptates sapiente consequuntur veritatis
+                    dolorem id eveniet maiores dolores dicta assumenda corrupti
+                    explicabo.
+                </p>
+                <h5 class="readm">
+                    <a class="read" href="AboutUs.html">read more</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

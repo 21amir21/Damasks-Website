@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css"/>
+    <meta charset="utf-8"/>
+    <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    ></script>
+    <title>Office products</title>
+    <style>
+        body {
+            margin: 3px;
+        }
+
+        .footer {
+            border-radius: 5px;
+        }
+
+        body {
+            background-color: rgba(235, 223, 198, 0.7);
+        }
+
+        #navbar a:hover {
+            background-color: rgb(239, 198, 145);
+            color: #f1f1f1;
+            opacity: 1;
+        }
+
+        .office-img {
+            background-image: url("../images/officemine.jpg");
+            margin-right: auto;
+            margin-left: auto;
+
+            min-height: 500px;
+            z-index: 1;
+            background-position: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .openbtn:hover {
+            background-color: rgb(239, 198, 145);
+        }
+
+        .sidenav a:hover,
+        .dropdown-btn:hover {
+            color: rgb(239, 198, 145);
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+
+        .search-btn {
+            color: rgb(239, 198, 145);
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        td img {
+            width: 400px;
+            height: 300px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 30px;
+        }
+
+        .card {
+            border-radius: 15px;
+        }
+
+        .card button {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="office-img">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"
+            ><img src="../images/logo.png" width="180" alt="logo"
+            /></a>
+        </div>
+        <nav>
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Customer Service.html">Customer Service</a></li>
+                    <li><a href="AboutUs.html">About</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <p class="title">Office</p>
+            <div class="search-box">
+                <input
+                        class="search-txt"
+                        type="text"
+                        name="search"
+                        placeholder="Type to search"
+                />
+                <a class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <div class="container2" onclick="myFunction(this)"></div>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+                >
+                <button class="dropdown-btn">
+                    Products
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="products.html">All Products</a>
+                    <a href="livingrooms.html">Living room </a>
+                    <a href="office_product.html">Office </a>
+                    <a href="Outdoors.html">Outdoor</a>
+                    <a href="Bedrooms.html">Bedroom</a>
+                    <a href="DiningRooms.html">Dining Room</a>
+                    <a href="Kitchen.html">Kitchen</a>
+                </div>
+
+                <button class="dropdown-btn">
+                    Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="projects.html">All Projects</a>
+                    <a href="office_project.html">Office</a>
+                    <a href="Hotel%20Project.html">hotel</a>
+                    <a href="Villa%20Project.html">Ville</a>
+                </div>
+                <button class="dropdown-btn">
+                    More
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="bestseller.html">Best Seller</a>
+                </div>
+            </div>
+
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+            </div>
+        </nav>
+    </div>
+</div>
+<table
+        style="
+        border-spacing: 30px 10px;
+        padding: 50px;
+        color: white;
+        text-align: center;
+        margin: auto;
+      "
+>
+    <tr>
+        <td>
+            <div class="card">
+                <img
+                        src="../images/office1.jpg"
+                        width="500"
+                        alt="Bedroom1"
+                        style="width: 100%"
+                />
+                <p
+                        style="font-family: 'Courier New', Courier, monospace"
+                        class="product_text"
+                >
+                    Modern Desk
+                </p>
+                <p class="price">3000 L.E.</p>
+                <p class="product_description">Some text about the product..</p>
+                <p>
+                    <button>Add to Cart</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <img
+                        src="../images/black_stand.jpg"
+                        width="500"
+                        alt="Bedroom2"
+                        style="width: 100%"
+                />
+                <p
+                        style="font-family: 'Courier New', Courier, monospace"
+                        class="product_text"
+                >
+                    Black Stand
+                </p>
+                <p class="price">500 L.E.</p>
+                <p class="product_description">Some text about the product..</p>
+                <p>
+                    <button>Add to Cart</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <img
+                        src="../images/greens.jpg"
+                        width="500"
+                        alt="Bedroom3"
+                        style="width: 100%"
+                />
+                <p
+                        style="font-family: 'Courier New', Courier, monospace"
+                        class="product_text"
+                >
+                    Plant Pot
+                </p>
+                <p class="price">300 L.E.</p>
+                <p class="product_description">Some text about the product..</p>
+                <p>
+                    <button>Add to Cart</button>
+                </p>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="card">
+                <img
+                        src="../images/chair1.jpg"
+                        width="500"
+                        alt="Bedroom4"
+                        style="width: 100%"
+                />
+                <p
+                        style="font-family: 'Courier New', Courier, monospace"
+                        class="product_text"
+                >
+                    Comfy Chair
+                </p>
+                <p class="price">2900 L.E.</p>
+                <p class="product_description">Some text about the product..</p>
+                <p>
+                    <button>Add to Cart</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <img
+                        src="../images/lamp.jpg"
+                        width="500"
+                        style="width: 100%"
+                        alt="Bedroom5"
+                />
+                <p
+                        style="font-family: 'Courier New', Courier, monospace"
+                        class="product_text"
+                >
+                    Hydrolic Desk Lamp
+                </p>
+                <p class="price">2900 L.E.</p>
+                <p class="product_description">Some text about the product..</p>
+                <p>
+                    <button>Add to Cart</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <img src="../images/sculp.jpg" alt="Bedroom6" style="width: 100%"/>
+                <p
+                        style="font-family: 'Courier New', Courier, monospace"
+                        class="product_text"
+                >
+                    SCULUP
+                </p>
+                <p class="price">1500 L.E.</p>
+                <p class="product_description">Some text about the product..</p>
+                <p>
+                    <button>Add to Cart</button>
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<footer class="footer">
+    <hr/>
+    <table>
+        <tr style="height: 60px">
+            <th>
+                <p style="font-size: 20px"><em>Damasks</em></p>
+            </th>
+            <th>Explore</th>
+            <th>Visit Us</th>
+            <th>Follow Us</th>
+            <th>Contact Us</th>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <a href="index.html" style="text-decoration: none; color: white"
+                >Home</a
+                >
+            </td>
+            <td>7th st., No.261, In front of El Qamar El Senai, New Maadi</td>
+            <td>
+                <a
+                        href="https://www.Instagram.com/"
+                        style="text-decoration: none; color: white"
+                >Instagram
+                </a>
+            </td>
+            <td>
+                <a
+                        href="mailto:custservice@damasks.com"
+                        style="text-decoration: none; color: white"
+                >custservice@damasks.com</a
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <a href="AboutUs.html" style="text-decoration: none; color: white"
+                >About</a
+                >
+            </td>
+            <td>Cairo,Egypt</td>
+            <td>
+                <a
+                        href="https://www.facebook.com/"
+                        style="text-decoration: none; color: white"
+                >Facebook</a
+                >
+            </td>
+            <td>20-2-5193618</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <a href="projects.html" style="text-decoration: none; color: white"
+                >Projects</a
+                >
+            </td>
+            <td></td>
+            <td>
+                <a
+                        href="https://www.linkedin.com/"
+                        style="text-decoration: none; color: white"
+                >LinkedIn</a
+                >
+            </td>
+            <td>01026555844</td>
+        </tr>
+    </table>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

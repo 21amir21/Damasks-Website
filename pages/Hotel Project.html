@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="../style.css"/>
+
+    <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    ></script>
+    <title>Hotel Project</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        p {
+            transform: translate(-20%, 30%);
+            text-align: center;
+            width: 500px;
+            height: 475px;
+
+            float: right;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .hotel_pic {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.6)
+            ),
+            url("../images/palm&pool.jpg");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            filter: blur(2px);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="logo">
+        <a href="index.html"
+        ><img src="../images/logo.png" width="180" alt="logo"
+        /></a>
+    </div>
+    <nav>
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="customer%20service.html">Customer Service</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="search-box">
+            <input
+                    class="search-txt"
+                    type="text"
+                    name="search"
+                    placeholder="Type to search"
+            />
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+        <div class="container2" onclick="myFunction(this)"></div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+            >
+            <button class="dropdown-btn">
+                Products
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="Products.html">All Products</a>
+                <a href="livingrooms.html">Living room </a>
+                <a href="office_product.html">Office </a>
+                <a href="Outdoors.html">Outdoor</a>
+                <a href="Bedrooms.html">Bedroom</a>
+                <a href="DiningRooms.html">Dining Room</a>
+                <a href="Kitchen.html">Kitchen</a>
+            </div>
+
+            <button class="dropdown-btn">
+                Projects
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="projects.html">All Projects</a>
+                <a href="office_project.html">Office</a>
+                <a href="Hotel Project.html">hotel</a>
+                <a href="../Villa%20Project.html">Ville</a>
+            </div>
+            <button class="dropdown-btn">
+                More
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="bestseller.html">Best Seller</a>
+            </div>
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </div>
+    </nav>
+</div>
+
+<div>
+    <p class="hotel_txt">The Hotel Project</p>
+</div>
+<div class="hotel_pic"></div>
+
+<br/>
+
+<ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="Hotel Project.html">Hotel Project</a></li>
+</ul>
+
+<br/>
+
+<div>
+    <div class="row-wrap">
+        <div class="row">
+            <div class="colS">
+                <img
+                        src="../images/hotelLounge.jpg"
+                        alt="hotel Lounge"
+                        class="hotel-img"
+                />
+            </div>
+
+            <div class="colL">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam sunt
+                    ipsam modi, dolorum voluptates sapiente consequuntur veritatis
+                    dolorem id eveniet maiores dolores dicta assumenda corrupti
+                    explicabo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-wrap">
+        <div class="row">
+            <div class="colS">
+                <img
+                        src="../images/hotelRestaurant.jpg"
+                        alt="hotel Restaurant"
+                        class="hotel-img"
+                />
+            </div>
+
+            <div class="colL">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam sunt
+                    ipsam modi, dolorum voluptates sapiente consequuntur veritatis
+                    dolorem id eveniet maiores dolores dicta assumenda corrupti
+                    explicabo.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row-wrap">
+        <div class="row">
+            <div class="colS">
+                <img
+                        src="../images/hotelRoof.jpg"
+                        alt="Hotel Roof"
+                        class="hotel-img"
+                />
+            </div>
+
+            <div class="colL">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam sunt
+                    ipsam modi, dolorum voluptates sapiente consequuntur veritatis
+                    dolorem id eveniet maiores dolores dicta assumenda corrupti
+                    explicabo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-wrap">
+        <div class="row">
+            <div class="colL">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam sunt
+                    ipsam modi, dolorum voluptates sapiente consequuntur veritatis
+                    dolorem id eveniet maiores dolores dicta assumenda corrupti
+                    explicabo.
+                </p>
+            </div>
+            <div class="colS">
+                <img
+                        src="../images/hotelRoom.jpg"
+                        alt="Hotel Room"
+                        class="hotel-img"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <hr/>
+    <table>
+        <tr style="height: 60px">
+            <td>
+                <h3 style="font-size: 20px"><em> Damasks </em></h3>
+            </td>
+            <td>Explore</td>
+            <td>Visit Us</td>
+            <td>Follow Us</td>
+            <td>Contact Us</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <a href="index.html" style="text-decoration: none; color: white"
+                >Home</a
+                >
+            </td>
+            <td>7th st., No.261, In front of El Qamar El Senai, New Maadi</td>
+            <td>
+                <a
+                        href="https://www.Instagram.com/"
+                        style="text-decoration: none; color: white"
+                >Instagram</a
+                >
+            </td>
+            <td>
+                <a
+                        href="mailto:custservice@damasks.com"
+                        style="text-decoration: none; color: white"
+                >custservice@damasks.com</a
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <a href="AboutUs.html" style="text-decoration: none; color: white"
+                >About</a
+                >
+            </td>
+            <td>Cairo,Egypt</td>
+            <td>
+                <a
+                        href="https://www.facebook.com/"
+                        style="text-decoration: none; color: white"
+                >Facebook</a
+                >
+            </td>
+            <td>20-2-5193618</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <a href="projects.html" style="text-decoration: none; color: white"
+                >Projects</a
+                >
+            </td>
+            <td></td>
+            <td>
+                <a
+                        href="https://www.linkedin.com/"
+                        style="text-decoration: none; color: white"
+                >LinkedIn</a
+                >
+            </td>
+            <td>01026555844</td>
+        </tr>
+    </table>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
