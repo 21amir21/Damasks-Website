@@ -12,4 +12,4 @@ This is a group project at my university in Web Programming module
 
 ## Screenshot of the About Us page :-
 
-![](AboutUs.JPG)
+![](screenshots/AboutUs.JPG)
