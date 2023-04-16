@@ -2,7 +2,7 @@
 
 ## (Still Under Development)
 
-This is a group project at my university in Web Programming module
+This is a group project done with 5 of my colleagues at university in the Web Programming module
 
 > The Used Technologies are :-
 >
